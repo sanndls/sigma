@@ -65,8 +65,22 @@ def finalizar(tablero):
 
     return devolver
 
+def tiempo_de_juego(inicio):
+    """ Sandra: Muestra el  tiempo que ha tomado la partida."""
+    fin = time.time()
+    tiempo_transcurrido = fin - inicio
+    
+    horas = round(tiempo_transcurrido // 3600)
+    minutos = round(tiempo_transcurrido // 60) % 60
+    segundos = round(tiempo_transcurrido % 60)
+
+    
+    print(f"Tiempo de juego = {horas} horas : {minutos} minutos : {segundos} segundos")
 
 def main():
+    inicio = time.time()
     memotest_juego()
+    tiempo_de_juego(inicio)
+    
 
 main()
