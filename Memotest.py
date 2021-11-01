@@ -1,3 +1,4 @@
+import time
 def memotest_juego():
     """
     tablero es una lista cuyos elementos representan cada "casillero" de el tablero
