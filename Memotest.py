@@ -9,6 +9,7 @@ FICHAS_POR_FILA = 4
 
 def memotest_juego(tablero):
     refresca_tablero(tablero)
+    intento = 1
 
     while not finalizar(tablero):
 
@@ -22,6 +23,8 @@ def memotest_juego(tablero):
             tablero[primera_posicion][ESTADO_FICHA] = False
             tablero[segunda_posicion][ESTADO_FICHA] = False
             refresca_tablero(tablero)
+            intento += 1  
+    print(f"Intentos realizados: {intento}")
 
 def refresca_tablero(tablero):
     """ Felipe: esta funcion se encarga de printear por pantalla el tablero dado por parametro """
